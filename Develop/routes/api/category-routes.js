@@ -7,9 +7,9 @@ router.get('/', async (req, res) => {
   // find all categories
   const result = await Category.findAll();
   console.log(result);
-  const jsonToSend = result.toJSON();
+  const jsonToSend = result;
   console.log(jsonToSend);
-  res.send(jsonToSend);
+  res.json(jsonToSend);
   // be sure to include its associated Products
 });
 
